@@ -17,20 +17,14 @@ from webdriver_manager.firefox import GeckoDriverManager
 class TestOpenwebpageloginaddcar():
     def setup_method(self, method):
         self.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+        self.driver.maximize_window()
         self.vars = {}
 
     def teardown_method(self, method):
         self.driver.quit()
 
     def test_openwebpageloginaddcar(self):
-        self.driver.get("https://qauto.forstudy.space/")
-        sleep(2)
-        print(self.driver.set_user_verified)
-        print(self.driver.get_credentials)
-        print(self.driver.current_window_handle)
-        print(self.driver.get_pinned_scripts())
-        print(self.driver.page_source)
-        self.driver.maximize_window()
+        self.driver.get("https://guest:welcome2qauto@qauto.forstudy.space/")
         assert self.driver.title == "Hillel Qauto"
         self.driver.find_element(By.CSS_SELECTOR, ".btn-outline-white").click()
         element = self.driver.find_element(By.CSS_SELECTOR, ".btn-outline-white")
