@@ -1,5 +1,6 @@
 from pages.base_page import BasePage
 from pages.login_page import LoginPage
+from pages.signup_page import SignupPage
 from utils.locators import *
 
 
@@ -17,5 +18,5 @@ class HomePage(BasePage):
 
     def click_sign_up_button(self):
         self.find_element(*self.locator.SIGNUP).click()
-        return SignUpPage(self.driver)
+        return SignupPage(self.driver)
 

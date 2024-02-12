@@ -1,5 +1,5 @@
 from pages.base_page import BasePage
 
 
-class GaragePage(BasePage):
+class ExpensesPage(BasePage):
     pass
