@@ -36,7 +36,7 @@ class GaragePage(BasePage):
         mileage = added_car.find_element(*self.locator.MILEAGE_ADDED)
 
         return (brand.get_attribute('alt') == kwargs['model'] and
-                model.text == f'{kwargs['brand']} {kwargs['model']}' and
+                model.text == f"{kwargs['brand']} {kwargs['model']}" and
                 mileage.get_attribute('value') == str(kwargs['mileage']))
 
     @property
