@@ -10,13 +10,12 @@ class HomePage(BasePage):
         super().__init__(driver=driver)
 
     def check_if_loaded(self):
-        return True if self.find_element(*self.locator.LOGO) else False
+        return True if self.find_elem(self.locator.LOGO) else False
 
     def click_sign_in_button(self):
-        self.find_element(*self.locator.SIGNIN).click()
+        self.find_elem(self.locator.SIGNIN).click()
         return LoginPage(self.driver)
 
     def click_sign_up_button(self):
-        self.find_element(*self.locator.SIGNUP).click()
+        self.find_elem(self.locator.SIGNUP).click()
         return SignupPage(self.driver)
-

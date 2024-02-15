@@ -10,13 +10,13 @@ class LoginPage(BasePage):
         super().__init__(driver)
 
     def enter_email(self, email):
-        self.find_element(*self.locator.EMAIL).send_keys(email)
+        self.find_elem(self.locator.EMAIL).send_keys(email)
 
     def enter_password(self, password):
-        self.find_element(*self.locator.PASSWORD).send_keys(password)
+        self.find_elem(self.locator.PASSWORD).send_keys(password)
 
     def click_login_button(self):
-        self.find_element(*self.locator.LOGIN).click()
+        self.find_elem(self.locator.LOGIN).click()
 
     def login(self, user):
         user = users.get_user(user)
@@ -31,7 +31,4 @@ class LoginPage(BasePage):
 
     def login_with_in_valid_user(self, user):
         self.login(user)
-        return self.find_element(*self.locator.ERROR_MESSAGE).text
-
-
-
+        return self.find_elem(self.locator.ERROR_MESSAGE).text
