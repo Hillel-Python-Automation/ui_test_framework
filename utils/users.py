@@ -4,6 +4,7 @@ from utils.util import get_number
 
 users = [
     {"name": "validuser", "email": f"yuri.gr.bond+{get_number()}@gmail.com", "password": "E5YvjATAPb7@Uz4"},
+    {'name': 'test_user', 'email': 'yuri.gr.bond+1203686@gmail.com', 'password': 'E5YvjATAPb7@Uz4'}
 ]
 
 
